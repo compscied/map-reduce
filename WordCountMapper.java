@@ -1,12 +1,11 @@
-package com.hadoop.example.mapreduce;
- 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class WordCountMapper extends Mapper<LongWritable, Text, Text, LongWritable> {
+public class WordCountMapper extends Mapper<LongWritable, Text, Text, LongWritable> 
+{
   private Text word = new Text();
   private LongWritable count = new LongWritable();
 	
@@ -18,8 +17,10 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, LongWritab
     String[] split = value.toString().split("\t+");
 	
 	word.set(split[0]);
-    if (split.length > 2) {
-      try {
+    if (split.length > 2) 
+    {
+      try 
+      {
         count.set(Long.parseLong(split[2]));
         context.write(word, count);
       } catch (NumberFormatException e) {
