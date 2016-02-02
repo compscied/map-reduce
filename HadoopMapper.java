@@ -16,7 +16,8 @@ public class HadoopMapper extends Mapper<LongWritable, Text, Text, LongWritable>
     // we project out (word, occurrences) so we can sum over all years
     String[] split = value.toString().split("\t+");
 	
-	word.set(split[0]);
+    word.set(split[0]);
+    
     if (split.length > 2) 
     {
       try 
