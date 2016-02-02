@@ -4,7 +4,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class WordCountMapper extends Mapper<LongWritable, Text, Text, LongWritable> 
+public class HadoopMapper extends Mapper<LongWritable, Text, Text, LongWritable> 
 {
   private Text word = new Text();
   private LongWritable count = new LongWritable();
