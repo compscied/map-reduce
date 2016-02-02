@@ -1,2 +1,2 @@
 # map-reduce
-- simple classic word count example
+- simple map-reduce example
